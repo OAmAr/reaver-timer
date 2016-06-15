@@ -1,4 +1,4 @@
  #reaver-timer
-Dependencies:
-tee
-expect
+Dependencies: \n
+tee\n
+expect\n
